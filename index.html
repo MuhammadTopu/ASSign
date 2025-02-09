@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inception - A Mind-Bending Masterpiece</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00ffcc;
+        }
+
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2b2f33, #003328);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fa0303;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(105, 10, 10, 0.082);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(189, 19, 19, 0.2);
+        }
+
+        /* Movie Poster */
+        .movie-poster {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .movie-poster img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .movie-poster img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            cursor: pointer;
+        }
+
+        /* Trailer Section */
+        .trailer {
+    position: relative;
+    width: 400px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.trailer img {
+    width: 100%;
+    height: 226px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+    cursor: pointer;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.trailer video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 13, 0.5);
+    position: absolute;
+    opacity: 0;
+    top: 1;
+    left: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.trailer:hover img {
+    opacity: 0;
+}
+
+.trailer:hover video {
+    opacity: 1;
+}
+
+
+        /* Sections */
+        section {
+            margin: 40px 0;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #011b19, #606069);
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+                margin: 0 10px;
+            }
+
+            .trailer iframe {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Inception</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#trailer">Trailer</a>
+        <a href="#summary">Summary</a>
+        <a href="#why-love">Why I Love It</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About the Movie</h2>
+            <div class="movie-poster">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg" alt="Inception Movie Poster">
+            </div>
+            <p><strong>Director:</strong> Christopher Nolan</p>
+            <p><strong>Producers:</strong> Christopher Nolan, Emma Thomas</p>
+            <p><strong>Release Date:</strong> July 16, 2010</p>
+            <p><strong>Genre:</strong> Sci-Fi, Action, Thriller</p>
+        </section>
+
+        <section id="trailer" class="trailer">
+            <h2>Official Trailer</h2>
+            <img src="https://assets.vogue.com/photos/5891f8ef12a7b1df212c9562/master/w_2560%2Cc_limit/inception.jpg" alt="Trailer Thumbnail">
+            <video class="vid" autoplay muted loop src="./video.mp4"></video>
+        </section>
+
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>Dom Cobb (Leonardo DiCaprio) is a skilled thief who specializes in 
+                stealing secrets from within the subconscious during the dream state.
+                 His abilities have made him a valuable player in the world of corporate espionage 
+                 but have also cost him dearly. Cobb is offered a chance at redemption when he is tasked 
+                 with planting an idea in someone's mind—a process known as "inception." As he assembles 
+                 a team to carry out the mission, Cobb must confront his own demons and navigate the blurred 
+                 lines between reality and dreams.</p>
+        </section>
+
+        <section id="why-love">
+            <h2>Why I Love It</h2>
+            <p>Inception is a cinematic marvel that combines a complex,
+                 layered narrative with stunning visuals and a mesmerizing 
+                 score by Hans Zimmer. Christopher Nolan's direction is masterful,
+                  and the performances, particularly by Leonardo DiCaprio, are captivating.
+                   The film's exploration of dreams, reality, and the subconscious is both 
+                   intellectually stimulating and emotionally resonant. The ambiguous ending 
+                   leaves viewers questioning the nature of reality, making it a film that stays 
+                   with you long after the credits roll.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Inception Fan Page. All rights reserved. | Made with ❤️ by Kamran Hossain Topu</p>
+    </footer>
+
+</body>
+</html>
